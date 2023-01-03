@@ -1,6 +1,13 @@
 import { expect, it } from "vitest";
 
-export const addTwoNumbers = (params) => {
+// Specify complex types
+type addTwoNumberArgs = {
+  first: number;
+  second: number;
+};
+
+// Or use inline objects
+export const addTwoNumbers = (params: {first: number, second: number}) => {
   return params.first + params.second;
 };
 
